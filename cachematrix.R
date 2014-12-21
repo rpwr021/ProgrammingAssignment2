@@ -1,20 +1,21 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+## submisiion rpwr021
 
-## This function creates a special "matrix" object that can cache its inverse.
+## create matrixe which can cache its inverse 
 
 makeCacheMatrix <- function(x = matrix()) {
             m <- NULL
         set <- function(y) {
-                            x <<- y
-                        m <<- NULL
-                                }
-                get <- function() x
-                setinv <- function(cacheSolve) m <<- cacheSolve
-                        getinv <- function() m
-                        list(set = set, get = get,
-                                          setinv = setinv,
-                                                       getinv = getinv)
+
+                x <<- y
+                m <<- NULL
+                            }
+
+        get <- function() x
+        setinv <- function(cacheSolve) m <<- cacheSolve
+        getinv <- function() m
+                list(set = set, get = get,setinv = setinv,getinv = getinv)
 }
 
 
